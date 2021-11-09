@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<Products>
+		<Product ID="Item_802017" UserTypeID="Item"
+			ParentID="Product_802016">
+			<Name>858595478581</Name>
+			<ClassificationReference
+				ClassificationID="FHSCLASS_12_16_1_52" Type="subclass link" />
+			<values>
+				<ATR_DigitalFlag>N</ATR_DigitalFlag>
+				<ATR_VDFFlag>N</ATR_VDFFlag>
+				<ATR_MinOrderQty>5</ATR_MinOrderQty>
+				<ATR_MinTransferQty>2</ATR_MinTransferQty>
+				<ATR_Onboarded>PDF Migration</ATR_Onboarded>
+				<ATR_UPCEAN>858595478586</ATR_UPCEAN>
+				<ATR_DiscontinueDate>2022-01-01</ATR_DiscontinueDate>
+				<ATR_SupplierID>100000026</ATR_SupplierID>
+			</values>
+			<values>
+				<ATR_DigitalFlag>N</ATR_DigitalFlag>
+				<ATR_VDFFlag>N</ATR_VDFFlag>
+				<ATR_MinOrderQty>5</ATR_MinOrderQty>
+				<ATR_MinTransferQty>2</ATR_MinTransferQty>
+				<ATR_Onboarded>PDF Migration</ATR_Onboarded>
+				<ATR_UPCEAN>858595478586</ATR_UPCEAN>
+				<ATR_DiscontinueDate>2022-01-01</ATR_DiscontinueDate>
+				<ATR_SupplierID>100000026</ATR_SupplierID>
+			</values>
+		</Product>
+		<Product ID="Item_802019" UserTypeID="Item"
+			ParentID="Product_802016">
+			<Name>858595478581</Name>
+			<ClassificationReference
+				ClassificationID="FHSCLASS_12_16_1_52" Type="subclass link" />
+			<values>
+				<ATR_DigitalFlag>N</ATR_DigitalFlag>
+				<ATR_VDFFlag>N</ATR_VDFFlag>
+				<ATR_MinOrderQty>5</ATR_MinOrderQty>
+				<ATR_MinTransferQty>3</ATR_MinTransferQty>
+				<ATR_Onboarded>PDF Migration</ATR_Onboarded>
+				<ATR_UPCEAN>858595478587</ATR_UPCEAN>
+				<ATR_DiscontinueDate>2023-01-15</ATR_DiscontinueDate>
+				<ATR_SupplierID>100000026</ATR_SupplierID>
+			</values>
+			<Product ID="Item_802020" UserTypeID="Item"
+			ParentID="Item_802019">
+			<Name>95000000</Name>
+			<ClassificationReference
+				ClassificationID="FHSCLASS_12_16_1_52" Type="subclass link" />
+			<values>
+				<ATR_DigitalFlag>N</ATR_DigitalFlag>
+				<ATR_VDFFlag>N</ATR_VDFFlag>
+				<ATR_MinOrderQty>5</ATR_MinOrderQty>
+				<ATR_MinTransferQty>3</ATR_MinTransferQty>
+				<ATR_Onboarded>PDF Migration Sub</ATR_Onboarded>
+				<ATR_UPCEAN>858595478591</ATR_UPCEAN>
+				<ATR_DiscontinueDate>2023-01-15</ATR_DiscontinueDate>
+				<ATR_SupplierID>100000030</ATR_SupplierID>
+			</values>
+		</Product>
+		</Product>
+	</Products>

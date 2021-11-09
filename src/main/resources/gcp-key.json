@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "macysproject",
+  "private_key_id": "45cc27f8077d317b8069c3701de0a72ed042a30b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDh5P1gODeJ+Kgu\nuE8b9ulGztnIrsGkK4EVR8Ym9MZl/hZ0wKMavHWwmSftVkcNrnYicFZFwdiJ+bDh\nPSHwDxj5k5HBaUkejmk8iguDSHPs4QDQOyGK+LJKeEX2LlZNvbQic0gG2SC49rzA\n29pea7XpMtmPYtVW7sipYokkeKSBwOkY+CxzPCp6kIvsTXptj4sN7cdpmvLXK5Hw\nOP/tULJSp2DwGiFi7SuxNW9QO8KHHpnUR+Ocyxp/5JjDAGQi+s5YHolJnQCuly+O\nFMJ3xjjjLc5bKekXxq8sGXyqlxoBei/Jnrgqyn66ZhqZS2evAPvbKI99sGdjGHyd\nx8fMaxGtAgMBAAECggEAJpiG+DEywBalubHRBnCmA+ykxkahnEi4mee1AgPxgAyt\nTo55b8CChUVtzn3ezwYfdhvmia2or05ju+BDk64osL/XeAnird9cOLVHaUtwTylU\nh7+KqCF86P9qyLi7EzZV+ErlJBJmJmQ19Oe7hEV4A9ul03tqAxvyWgqVbw9T4D1A\n5Jj7l4/IumpWemhpzbBIKl8NWJ5y1Xnmf9AZLhAJ4ue3H0/DkB31M2ovXujKErh1\nrQO5z6O16z0GtuHUztCeGSHEdN5U2FGCo1IMh/9H97NImZiPg72GeMnoBhrmJucD\nUdGMRShuXLZ/A5rB+L2eJbgcftgttKw/knq0XVRmQQKBgQD/JRRJffogD0JlVH08\nMrupFPYR8s/BCkJeP3wtkZJc4nF3GUCwJ4sp2m8P3yDgUHTJfBIrRIFDzmwuhSYH\nYzzL7CGQs/A6Ow+Y7SYOoPDZTZbItggnmsjMbnXKSof6LOdODcAS3Argh2g0GQrX\nx/+tmafdUr6RamO0E6ikY/ENIQKBgQDiptAeKKe2wvsA0ahMQ8+CBxGSj5ev3VUF\nVRG1mvylXbOHh+53jlxjIdWR1ugs8zIzcQpdp0bpM47MWHma3MR+Lk8UKjRPJCe9\nSuXESZszgaAdRqN2VUpgwBO537B4AM71bA+F75dbak9sBo/KHBPoHG/mE9ag7E3x\ngOPwqiGHDQKBgG7YdQ/Yoyn6dyX+psnYYJ78dEsn6go7osm/WvuRGr0vw4uydOAS\nzerI8yc6ENZjHdnLBTm28VG8BFPRlMvw2SDe3VY4Vk12CzitDrOcSAagJrncG37Z\nSBNIifPwnVKa34KRhriq0C7rpOG9X3CPewy4jK0inZgfWGGLiOCiar8BAoGBAMHE\n9XZjMYc5SNgZZjXVX2l925MeOgN7SP2nDd3h5A8IfbzoBIKn7eo+edUWEyaiwA9k\nnAUXRrOGhZXEKiqwhTiPJMJLlq72bRcTGj5m4030i0ucIZHANzdh3ztwtvDRWB5P\nxTGvdQoNaFslfPbAbHBrJ2tfGIY5oCVRGQ6elM1dAoGBAM/9GfFDlJoc1T7X0fGX\n/i6haMhgtFiF3KjSRPLdrx6jlt1MHt+qwAP328VvYQy/gT95fTK4VXNYIPUWoQYg\nqIkqh3UUozreU5Kug9hQ+iLs2+veTrsLAb0PnJsOiGE7azgukxNjYkOLwUhNFo7x\nPjlDZUEsEdJKgjIlw0bDUmWw\n-----END PRIVATE KEY-----\n",
+  "client_email": "gcp-demo-service-account@macysproject.iam.gserviceaccount.com",
+  "client_id": "117860311839905633703",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gcp-demo-service-account%40macysproject.iam.gserviceaccount.com"
+}
