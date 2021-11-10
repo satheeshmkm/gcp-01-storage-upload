@@ -1,13 +1,10 @@
 package com.sck.gcp.processor;
 
-import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -20,42 +17,65 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Component
 public class FileProcessor {
+
 	private static final Logger LOGGER = LoggerFactory.getLogger(FileProcessor.class);
 
 	public String readFile() {
+		String fileName = "xml/product.xml";
+		FileProcessor app = new FileProcessor();
+		InputStream is = app.getFileFromResourceAsStream(fileName);
+		return inputStreamToString(is);
+	}
+
+	private InputStream getFileFromResourceAsStream(String fileName) {
+		// The class loader that loaded the class
+		ClassLoader classLoader = getClass().getClassLoader();
+		InputStream inputStream = classLoader.getResourceAsStream(fileName);
+		// the stream holding the file content
+		if (inputStream == null) {
+			throw new IllegalArgumentException("file not found! " + fileName);
+		} else {
+			return inputStream;
+		}
+
+	}
+
+	private String inputStreamToString(InputStream is) {
 		StringBuilder sb = new StringBuilder();
-		try (BufferedReader br = Files
-				.newBufferedReader(Paths.get(ClassLoader.getSystemResource("product.xml").toURI()))) {
-			// read line by line
+		try (InputStreamReader streamReader = new InputStreamReader(is, StandardCharsets.UTF_8);
+				BufferedReader reader = new BufferedReader(streamReader)) {
 			String line;
-			while ((line = br.readLine()) != null) {
+			while ((line = reader.readLine()) != null) {
 				sb.append(line).append("\n");
 			}
-
 		} catch (IOException e) {
 			LOGGER.error("IOException:", e);
-		} catch (URISyntaxException e) {
-			LOGGER.error("URISyntaxException:", e);
 		}
 		return sb.toString();
 	}
-	
+
 	public String readFile(MultipartFile uploadfile) {
-		StringBuilder sb = new StringBuilder();
+		InputStream inputStream = getFileFromRequestAsStream(uploadfile);
+
+		return inputStreamToString(inputStream);
+
+	}
+
+	private InputStream getFileFromRequestAsStream(MultipartFile uploadfile) {
+		InputStream inputStream = null;
 		try {
-			// read line by line
-			byte[] bytes = uploadfile.getBytes();
-            BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File(uploadfile.getName())));
-            stream.write(bytes);
-            stream.close();
-            sb.append(stream);
+			inputStream = uploadfile.getInputStream();
+
 		} catch (IOException e) {
 			LOGGER.error("IOException:", e);
-		} 
-		
-		return sb.toString();
+		}
+		if (inputStream == null) {
+			throw new IllegalArgumentException("file not found! " + uploadfile.getName());
+		} else {
+			return inputStream;
+		}
 	}
-	
+
 	public String convertToJSONL(String xmlString) {
 		StringBuilder builder = new StringBuilder();
 		String jsonPrettyPrintString = null;
@@ -70,7 +90,7 @@ public class FileProcessor {
 			 * xmlJSONObj.getJSONObject("UseContextLocale");
 			 */
 			JSONArray jsonProducts = xmlJSONObj.getJSONObject("Products").getJSONArray("Product");
-			
+
 			jsonProducts.forEach(i -> builder.append(i.toString()).append("\n"));
 			jsonPrettyPrintString = builder.toString();
 			// jsonProducts.toString();//xmlJSONObj.toString(PRETTY_PRINT_INDENT_FACTOR);

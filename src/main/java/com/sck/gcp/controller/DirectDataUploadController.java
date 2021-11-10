@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -21,8 +20,8 @@ import com.sck.gcp.service.XmlProcessingService;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-public class StepDataUploadController {
-	private static final Logger LOGGER = LoggerFactory.getLogger(StepDataUploadController.class);
+public class DirectDataUploadController {
+	private static final Logger LOGGER = LoggerFactory.getLogger(DirectDataUploadController.class);
 
 	@Autowired
 	private XmlProcessingService xmlProcessingService;
@@ -41,7 +40,7 @@ public class StepDataUploadController {
 
 	}
 
-	@ApiOperation("Upload the file to GCP Cloud Storage")
+	@ApiOperation("Upload the XML file, convert it to JSON and upload to BigQuery Table")
 	@PostMapping(value = "/process/convertxml/upload/{tableName}", consumes = { "multipart/form-data" })
 	public ResponseEntity<?> uploadFile(@RequestParam(value = "file", required = true) MultipartFile uploadfile,
 			@PathVariable("tableName") String tableName) {
