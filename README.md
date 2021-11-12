@@ -52,7 +52,7 @@ http://localhost:8080/gcp-services/swagger-ui.html
 
 
 - docker ps
-- dcoker stop <ContainerID>
+- docker stop <ContainerID>
 - docker rm <ContainerID>
 - docker rmi -f <imageName>
 
